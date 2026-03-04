@@ -1,0 +1,103 @@
+/*=============================================
+ RESETE BASICO, DEIXA O LAYOUT MAIS PREVISIVEL
+ ==============================================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+	
+	background: #FDF9FF; /*cor do fundo*/
+}
+
+/*==================
+   TOPO, HEADER
+====================*/
+.menu {
+   display: flex;              /* ativa flex */
+   justify-content: space-between; /* separa lados */
+   align-items: center;        /* mesma altura */
+   background: #9C7AB9;
+   padding: 10px 40px;
+   color: #FFFFFF;
+}
+
+.links {
+   display: flex;
+   gap: 15px;
+   list-style: none;
+}
+
+.icons {
+   display: flex;
+   gap: 10px;
+}
+
+.icons img {
+   width: 30px;
+   height: 30px;
+}
+#name .container {
+	background: #9C7AB9;
+	color: #FFFFFF;
+}
+.container {
+   display: flex;
+   margin: 0 auto;
+   justify-content: center;
+   flex-wrap: wrap; 
+}
+ nav ul a {
+	text-decoration: none; /*tira a linha de baixo do menu ex:sobre mim*/
+	color: #FFFFFF;	 
+	cursor: pointer; /*mãozinha*/
+	font-size: 15px; /*tamanho da fonte*/
+	margin-left: 10px
+	 
+ }
+ 
+nav ul li a:hover {
+   color: #FFFFFF;
+   background-color: #694D82;
+   }
+   
+ /*======================
+          FRASE
+=======================*/
+   
+   
+#frase .container {
+	 background: #FFFFFF; 
+	 color:  #9C7AB9;
+	 border: 1px solid #9C7AB9; /*confuguração da borda*/
+	 padding: 16px; /*altura*/
+	 width: 40%; /*largura*/
+	 border-radius: 30px; /*arredondamento da borda*/
+	 font-size: 20px;
+     display: flex; 
+	 margin: 0 auto; /*ajuda a centralizar*/
+ }
+ /*========================
+      BANNER
+==========================*/
+
+img  {
+	 
+  border: 5px solid #9C7AB9;
+	border-radius: 30px; /*arredondamento da borda*/
+	width: 1300px; /*largura*/
+}
+
+
+#sobre .container {
+	background: #FFFFFF; 
+	 color:  #9C7AB9;
+	 border: 1px solid #9C7AB9; /*confuguração da borda*/
+	 padding: 16px; /*altura*/
+	 width: 20%; /*largura*/
+	 border-radius: 30px; /*arredondamento da borda*/
+	 font-size: 25px;
+ 
+}
