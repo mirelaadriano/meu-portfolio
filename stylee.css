@@ -83,13 +83,15 @@ nav ul li a:hover {
       BANNER
 ==========================*/
 
-img  {
+.img-banner  {
 	 
   border: 5px solid #9C7AB9;
 	border-radius: 30px; /*arredondamento da borda*/
-	width: 1300px; /*largura*/
+	width: 1800px; /*largura*/
 }
-
+ /*========================
+      SOBRE MIM
+  ==========================*/    
 
 #sobre .container {
 	background: #FFFFFF; 
@@ -99,5 +101,123 @@ img  {
 	 width: 20%; /*largura*/
 	 border-radius: 30px; /*arredondamento da borda*/
 	 font-size: 25px;
+    
  
+}
+
+.img-eu{
+   padding: 16px; /*altura*/
+	 width: 300px; /*largura*/
+   align-items: center;
+   
+
+}
+
+.descricao {
+   max-width: 500px; 
+   font-size: 20px;
+   text-align: justify;
+}
+
+#my {
+   display: flex;        /* coloca lado a lado */
+   align-items: center;  /* mesma altura */             /*O que acontece: imagem ← esquerda,texto ← direita*/
+   gap: 30px;            /* espaço entre foto e texto */
+   display: flex;
+   justify-content: center; /* centraliza horizontal */
+   align-items: center;     /* centraliza vertical */
+}
+
+/*========================
+      HABILIDADES
+  ==========================*/
+
+
+
+#habilidades .container {
+    background: #FFFFFF; 
+	 color:  #9C7AB9;
+	 border: 1px solid #9C7AB9; /*confuguração da borda*/
+	 padding: 16px; /*altura*/
+	 width: 20%; /*largura*/
+	 border-radius: 30px; /*arredondamento da borda*/
+	 font-size: 25px;
+}
+.habilidades {
+   display: flex;          /* coloca lado a lado */
+   justify-content: center; /* centraliza tudo */
+   gap: 25px;               /* espaço entre cards */
+   flex-wrap: wrap;         /* quebra linha no celular */
+   padding: 20px;
+}
+.card {
+   background: #FFFFFF;
+   color: #9C7AB9;
+   padding: 70px;
+   border-radius: 15px;
+   width: 220px;
+   border: 3px solid #9C7AB9; /*confuguração da borda*/
+}
+/*========================
+      EXPERIENCIA
+  ==========================*/
+
+
+.cards {
+   background: #FFFFFF;
+   color: #9C7AB9;
+   padding: 40px;
+   border-radius: 15px;
+   width: 220px;
+   border: 3px solid #9C7AB9; /*confuguração da borda*/
+}
+
+
+
+
+
+
+
+/*========================
+      RESPONSIVO
+==========================*/
+
+
+@media (max-width: 768px) {
+   .sobre {
+      flex-direction: column;
+      text-align: center;
+   }
+   .img-banner {
+      width: 100%;
+   }
+   #frase .container {
+      width: 100%;
+   }
+   #sobre .container {
+      width: 100%;
+   }
+   .icons img {
+      width: 25px;
+      height: 25px;
+   }
+   .links {
+      flex-direction: column;
+      gap: 10px;
+   }
+   #name .container {
+      flex-direction: column;
+      gap: 10px;
+   }
+   #habilidades .container {
+      width: 100%;
+   }
+   .habilidades {
+      flex-direction: column;
+      align-items: center;
+   }
+   .card {
+      width: 100%;
+   }
+  
 }
