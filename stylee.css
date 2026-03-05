@@ -5,11 +5,20 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 body {
 	
 	background: #FDF9FF; /*cor do fundo*/
+
+}
+ /*ideal para colocar as cores que vc vai utilizar na composição do site*/
+:root{
+ --roxo:#9C7AB9;
+ --roxo-escuro:#694D82;    
+ --fundo:#FDF9FF;
+ 
 }
 
 /*==================
@@ -19,7 +28,7 @@ body {
    display: flex;              /* ativa flex */
    justify-content: space-between; /* separa lados */
    align-items: center;        /* mesma altura */
-   background: #9C7AB9;
+   background: var(--roxo);
    padding: 10px 40px;
    color: #FFFFFF;
 }
@@ -44,17 +53,18 @@ body {
 	color: #FFFFFF;
 }
 .container {
+	max-width: 1400px;
    display: flex;
    margin: 0 auto;
    justify-content: center;
    flex-wrap: wrap; 
 }
- nav ul a {
+.links a {
 	text-decoration: none; /*tira a linha de baixo do menu ex:sobre mim*/
 	color: #FFFFFF;	 
 	cursor: pointer; /*mãozinha*/
 	font-size: 15px; /*tamanho da fonte*/
-	margin-left: 10px
+	margin-left: 10px;
 	 
  }
  
@@ -87,20 +97,20 @@ nav ul li a:hover {
 	 
   border: 5px solid #9C7AB9;
 	border-radius: 30px; /*arredondamento da borda*/
-	width: 1800px; /*largura*/
+	width: 100%; /*largura*/
 }
  /*========================
       SOBRE MIM
   ==========================*/    
 
 #sobre .container {
-	background: #FFFFFF; 
+	 background: #FFFFFF; 
 	 color:  #9C7AB9;
 	 border: 1px solid #9C7AB9; /*confuguração da borda*/
 	 padding: 16px; /*altura*/
-	 width: 20%; /*largura*/
+	 max-width: 300px;
 	 border-radius: 30px; /*arredondamento da borda*/
-	 font-size: 25px;
+	 font-size: 25px; /*tamanho da fonte*/
     
  
 }
@@ -112,24 +122,30 @@ nav ul li a:hover {
    
 
 }
+/*============================
+   O TEXTO QUE FALA SOBRE MIM
+ ============================*/
 
 .descricao {
    max-width: 500px; 
    font-size: 20px;
    text-align: justify;
-}
-
-#my {
-   display: flex;        /* coloca lado a lado */
    align-items: center;  /* mesma altura */             /*O que acontece: imagem ← esquerda,texto ← direita*/
    gap: 30px;            /* espaço entre foto e texto */
-   display: flex;
    justify-content: center; /* centraliza horizontal */
-   align-items: center;     /* centraliza vertical */
+}
+/*================================
+  coloca a imagem e o texto no centro 
+  =============================*/
+#my {
+  display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 30px;
 }
 
 /*========================
-      HABILIDADES
+      HABILIDADES/ EXPERIENCIA/FORMAÇÃO
   ==========================*/
 
 
@@ -150,26 +166,79 @@ nav ul li a:hover {
    flex-wrap: wrap;         /* quebra linha no celular */
    padding: 20px;
 }
-.card {
+
+.card{
    background: #FFFFFF;
    color: #9C7AB9;
-   padding: 70px;
-   border-radius: 15px;
-   width: 220px;
-   border: 3px solid #9C7AB9; /*confuguração da borda*/
-}
-/*========================
-      EXPERIENCIA
-  ==========================*/
-
-
-.cards {
-   background: #FFFFFF;
-   color: #9C7AB9;
+   border: 1px solid #9C7AB9;
    padding: 40px;
-   border-radius: 15px;
-   width: 220px;
-   border: 3px solid #9C7AB9; /*confuguração da borda*/
+   width: 300px;
+   border-radius: 30px; /* deixa arredondado */
+}
+
+.container-cards{
+   display: flex; /* coloca os cards lado a lado */
+   justify-content: center; /* centraliza na página */
+   gap: 30px; /* espaço entre os cards */
+   flex-wrap: wrap; /* quebra linha no celular */
+}
+.card:hover{
+ transform: translateY(-5px);
+ box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+/*==========================
+    PROJETOS
+===========================*/
+
+.projetos  {
+	 display: flex;          /* coloca lado a lado */
+   justify-content: center; /* centraliza tudo */
+   gap: 25px;               /* espaço entre cards */
+   flex-wrap: wrap;         /* quebra linha no celular */
+   padding: 20px;
+	
+}
+#projetos .container {
+	
+	background: #FFFFFF; 
+	 color:  #9C7AB9;
+	 border: 1px solid #9C7AB9; /*confuguração da borda*/
+	 padding: 16px; /*altura*/
+	 max-width: 300px;
+	 border-radius: 30px; /*arredondamento da borda*/
+	 font-size: 25px; /*tamanho da fonte*/
+}
+
+#projeto-text{
+   max-width: 800px; /* limita largura do texto */
+   margin: 0 auto; /* centraliza na página */
+   font-size: 18px; /* tamanho da letra */
+   line-height: 1.6; /* espaço entre linhas */
+   padding: 20px; /* espaço interno */
+}
+#projeto-text p{
+   margin-bottom: 15px; /* espaço entre parágrafos */
+   text-align: justify; /* deixa o texto alinhado */
+}
+
+#projeto-text ul{
+   margin-left: 20px; /* espaço da lista */
+   margin-top: 10px;
+}
+
+#projeto-text li{
+   margin-bottom: 8px; /* espaço entre itens */
+   font-size: 17px;
+}
+
+#projeto-text{
+   max-width: 800px;
+   margin: 0 auto;
+   padding: 25px;
+   background: #FFFFFF;
+   border: 1px solid #9C7AB9;
+   border-radius: 25px;
+   color: #9C7AB9;
 }
 
 
@@ -177,6 +246,9 @@ nav ul li a:hover {
 
 
 
+
+
+	
 
 /*========================
       RESPONSIVO
@@ -184,10 +256,9 @@ nav ul li a:hover {
 
 
 @media (max-width: 768px) {
-   .sobre {
-      flex-direction: column;
-      text-align: center;
-   }
+  #my {
+   flex-direction: column;
+}
    .img-banner {
       width: 100%;
    }
@@ -218,6 +289,9 @@ nav ul li a:hover {
    }
    .card {
       width: 100%;
+   }
+   .descricao {
+	   
    }
   
 }
